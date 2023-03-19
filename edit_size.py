@@ -42,8 +42,8 @@ def resize_images(image_dir, output_dir, target_size):
 
 
 target_size = 512
-image_dir = 'data_train'
-output_dir = 'data_trainx512'
+image_dir = 'data_test'
+output_dir = 'data_testx512'
 resize_images(image_dir, output_dir, target_size)
 print("Done resizing images to {}x{} in {}".format(
     target_size, target_size, output_dir))

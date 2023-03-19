@@ -8,7 +8,7 @@ from tensorflow import keras
 
 
 # Dinh nghia
-data_path  = "data_trainx512"
+data_path  = "data_testx512"
 image_size  = 256 # Resize de tiet kiem thoi gian train
 n_epochs = 100
 n_batchsize = 32
@@ -68,7 +68,7 @@ def show_imageset(imageset):
         ax[i-1].imshow(imageset[i].reshape(image_size,image_size), cmap="gray")
     plt.show()
 
-data_link = 'data_gray.dat'
+data_link = 'data_test.dat'
 
 if not os.path.exists(data_link):
     # Load anh normal
