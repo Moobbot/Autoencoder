@@ -7,12 +7,9 @@ from sklearn.model_selection import train_test_split
 from tensorflow import keras
 
 
-# Dinh nghia
-data_path  = "data_trainx512"
-image_size  = 256 # Resize de tiet kiem thoi gian train
+image_size  = 256
 
 data_link = 'data_gray.dat'
-
 
 with open(data_link, "rb") as f:
     arr = pickle.load(f)
