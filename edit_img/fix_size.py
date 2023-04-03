@@ -25,7 +25,7 @@ def resize_images(image_dir, output_dir, target_size):
             img.save(output_filepath)
 
 
-target_size = 256
+target_size = 512
 image_dir = 'data_test'
 output_dir = 'data_test'
 resize_images(image_dir, output_dir, target_size)

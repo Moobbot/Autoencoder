@@ -42,7 +42,7 @@ def resize_images(image_dir, output_dir, target_size):
 
 
 target_size = 512
-image_dir = 'data_test'
+image_dir = 'data_testx512'
 output_dir = 'data_testx512'
 resize_images(image_dir, output_dir, target_size)
 print("Done resizing images to {}x{} in {}".format(

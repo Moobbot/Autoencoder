@@ -4,7 +4,8 @@ from PIL import Image
 from tensorflow import keras
 
 # Đường dẫn đến ảnh kiểm tra
-test_img_path = 'data_testx512/MQP_9963.JPG'
+# test_img_path = 'data_testx512/MQP_9562.jpg'
+test_img_path = 'data_testx512/test_img2.jpg'
 
 # Kich thước ảnh modal
 image_size = 256
@@ -34,6 +35,7 @@ noise = np.random.normal(loc=0, scale=noise_factor*sigma, size=test_img_y.shape)
 
 # test_img_y_noisy = test_img_y + noise_factor * np.random.normal(loc=0.0, scale=1.0, size=test_img_y.shape)
 test_img_y_noisy = test_img_y + noise
+# test_img_y_noisy = test_img_y
 
 # Cắt giá trị nằm ngoài khoảng [0, 255]
 test_img_y_noisy = np.clip(test_img_y_noisy, 0, 255)
@@ -71,16 +73,30 @@ noise_img = noise_img.resize((w,h))
 denoised_img = denoised_img.resize((w,h))
 
 # Hiển thị ảnh gốc, ảnh nhiễu và ảnh sau khi được khử nhiễu
-plt.subplot(1, 3, 1)
-plt.imshow(load_img)
-plt.title('Original Image')
 
-plt.subplot(1, 3, 2)
+# plt.subplot(1, 3, 1)
+# plt.imshow(load_img)
+# plt.title('Original Image')
+
+# plt.subplot(1, 3, 2)
+# plt.imshow(noise_img)
+# plt.title('Noise Image')
+
+# plt.subplot(1, 3, 3)
+# plt.imshow(denoised_img)
+# plt.title('Denoised Image')
+
+# plt.show()
+
+plt.figure(figsize=(4,2))
+plt.subplot(121)
 plt.imshow(noise_img)
-plt.title('Noise Image')
-
-plt.subplot(1, 3, 3)
+plt.title('Noise image')
+plt.xticks([])
+plt.yticks([])
+plt.subplot(122)
 plt.imshow(denoised_img)
-plt.title('Denoised Image')
-
+plt.title('Denoised image')
+plt.xticks([])
+plt.yticks([])
 plt.show()

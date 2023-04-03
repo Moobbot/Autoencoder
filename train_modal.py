@@ -11,7 +11,7 @@ from tensorflow import keras
 
 # Set parameters
 # đường dẫn đến thư mục chứa dữ liệu huấn luyện
-data_path  = "data_trainx512"
+data_path  = "data_train"
 image_size  = 256  # Kích thước ảnh
 
 # Create Function load image and prepare the dataset
